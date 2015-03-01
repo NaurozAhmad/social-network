@@ -1,0 +1,7 @@
+<template name='chatMenu'>
+	<div class="main">
+		{{#each userStuff}}
+			<p><a href="{{pathFor 'chat'}}">{{username}}</a></p>
+		{{/each}}
+	</div>
+</template>

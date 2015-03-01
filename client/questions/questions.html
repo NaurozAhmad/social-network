@@ -1,0 +1,14 @@
+<template name="questions">
+	{{#if currentUser}} <a href="{{pathFor 'newQuestion'}}"><button class="btn btn-default"> Open a question</button></a> {{/if}}
+
+	{{#each questions}}
+		<div class="post {{#if solved}}solved{{/if}}">
+			<h3><a href="{{pathFor 'theQuestion'}}">{{heading}}</a><small style="float: right; padding-top: 8px;">{{submitted}}</small></h3>
+			<div class="row">
+				<span class="col-sm-4">Tags: {{tags}}</span>
+				<span class="col-sm-4">Answers: {{answersCount}}</span>
+			</div>
+			
+		</div>
+	{{/each}}
+</template>

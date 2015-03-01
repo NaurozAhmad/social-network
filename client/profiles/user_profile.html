@@ -1,0 +1,74 @@
+<template name="acProfile">
+	<form class="form-horizontal main">
+		<h2 class="text-center">Your Username: {{currentUser.username}} <span style="font-size: 16px; padding-left: 2em;">edit</span></h2>
+		<div class="form-group">
+			<label for="user-type" class="col-sm-2 control-label">User Type</label>
+			<div class="col-sm-10">
+				<select class="form-control selType" name="stdType">
+					<option value="student">Student</option>
+					<option value="teacher">Teacher</option>
+				</select>
+			</div>
+		</div>
+		{{#if userType}}
+			<div class="form-group">
+				<label for="department" class="control-label col-sm-2">Department</label>
+				<div class="col-sm-10">
+					<select class="form-control" name="department">
+						<option value="computer-science">Computer Science</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="level" class="control-label col-sm-2">Level</label>
+				<div class="col-sm-10">
+					<select class="form-control" name="level">
+						<option value="bscs">BSCS (Hons)</option>
+						<option value="mscs">MSCS</option>
+						<option value="msc">MSc</option>
+					</select>
+				</div>
+			</div>
+		{{else}}
+			<div class="form-group">
+				<label for="department" class="control-label col-sm-2">Department</label>
+				<div class="col-sm-10">
+					<select class="form-control" name="department">
+						<option value="computer-science">Computer Science</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="subject" class="control-label col-sm-2">Subjects</label>
+				<div class="col-sm-10">
+					<div class="col-sm-6">
+						<label class="checkbox">
+							<input type="checkbox" name="subject" value="networking">Networking	
+						</label>
+						<label class="checkbox">
+							<input type="checkbox" name="subject" value="dld">Data Language and Design
+						</label>
+						<label class="checkbox">
+							<input type="checkbox" name="subject" value="electronics">Electronics
+						</label>
+						<label class="checkbox">
+							<input type="checkbox" name="subject" value="database">Database
+						</label>
+					</div>
+					<div class="col-sm-6">
+						<label class="checkbox">
+							<input type="checkbox" name="subject" value="java">Java Programming
+						</label>
+						<label class="checkbox">
+							<input type="checkbox" name="subject" value="web-dev">Web Development
+						</label>
+						<label class="checkbox">
+							<input type="checkbox" name="subject" value="c#">C# Programming
+						</label>
+					</div>
+				</div>
+			</div>
+		{{/if}}
+		
+	</form>
+</template>

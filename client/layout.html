@@ -1,0 +1,10 @@
+<template name="layout">
+	{{> header}}
+	<div>{{> leftBar}}</div>
+	<div class="container">
+		<div class="posts">
+			{{> errors}}
+			<div class="row-fluid" id="main">{{> yield}}</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,22 @@
+<template name="theQuestion">
+	<div class="post">
+		<h3>{{heading}}<small style="float: right; padding-top: 8px;">{{submitted}}</small></h3>
+		<p>Tags: {{tags}}</p>
+		<p>{{question}}</p>
+	</div>
+
+	{{#if currentUser}}
+		{{> answerSubmit}}
+	{{else}}
+		<p>Please login to give an answer.</p>
+	{{/if}}
+	
+
+	{{#if answerCount}}
+		{{#each answers}}
+			{{> answer}}
+		{{/each}}
+	{{else}}
+		No answers yet.
+	{{/if}}
+</template>

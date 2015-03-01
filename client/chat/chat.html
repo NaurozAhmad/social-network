@@ -1,0 +1,17 @@
+<template name="chat">
+	<div class="main">
+		<h3 style="margin-top: 0px;">
+			{{username}}
+		</h3>
+		<div class="chat container-fluid">
+			{{#each chatPM}}
+				<div class="chat-message {{#if equals sender currentUser._id}}right {{else}}left{{/if}}">
+					{{message}}
+					<div class="theTime">{{time}}</div>
+				</div>
+			{{/each}}
+		</div>
+		<textarea class="form-control message" rows="2" cols="40"></textarea>
+		<button class="btn btn-default">Send</button>
+	</div>
+</template>

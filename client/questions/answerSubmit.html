@@ -1,0 +1,35 @@
+<template name="answerSubmit">
+	<div class="post">
+		<form class="form main">
+			<div class="form-group">
+				<label for="answer" class="control-label">Answer</label>	
+				<textarea rows="5" class="form-control answer" name="answer"></textarea>
+			</div>
+			<div class="form-group"> 
+			   	<button type="submit" name="submit" class="btn btn-default btn-block">Submit</button>
+			</div>
+		</form>
+	</div>
+</template>
+
+<template name="answer">
+	<div class="post">
+		<h4>{{authName}}<span style="float:right; font-size: 14px;">{{submitted}}</span></h4>
+		<p>{{answer}}</p>
+		Rating: {{votes}}
+		{{#if currentUser}}
+			{{#if ownQuestion}}
+				<a class="rightAnswer" href="">Mark as right answer.</a>
+			{{else}}
+				{{#if voted}}
+					{{#each theVotes}}
+						You {{vote}} this. <a class="removeUpvote" href="">remove</a>
+					{{/each}}
+				{{else}}
+					<button class="btn btn-default" id="upvote"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></button>
+					<button class="btn btn-default" id="downvote"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span></button>
+				{{/if}}
+			{{/if}}
+		{{/if}}
+	</div>
+</template>

@@ -1,0 +1,26 @@
+<template name="tagsList">
+	{{#if tagsCount}}
+		<label class="control-label col-sm-2" for="tags">Or Select From List</label>
+		<div class="col-sm-10">	
+			<div class="tagslist">
+				{{#each tags}}
+					<div class="checkbox">
+						<label>
+							<input class="tagBoxes" type="checkbox" name="tagslist" value="{{tag}}">
+							{{tag}}
+						</label>	
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	{{/if}}
+</template>
+
+<!-- <template name="tag">
+<div class="checkbox">
+	<label>
+		<input class="tagBoxes" type="checkbox" name="tagslist" value="{{tagValue}}">
+		{{tagName}}
+	</label>
+</div>
+</template> -->

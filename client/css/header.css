@@ -1,0 +1,27 @@
+.login-form {
+	margin-top: 10px;
+	display: inline;
+}
+.form-group {
+	margin-top: 5px;
+}
+#menuLogin .dropdown-menu {
+	padding-top: 5px;
+	margin-top: 0;
+	background-color: #222;
+	border-top: 0px;
+	color: #FFF;
+}
+#menuLogin .btn {
+	margin-top: 8px;
+}
+.navbar-inverse {
+	border-bottom: none;
+}
+#registerLink {
+	color: #fff;
+}
+#registerLink:hover, #registerLink:focus {
+	color: #B7B7B7;
+	background-color: rgba(0,0,0,0);
+}

@@ -1,0 +1,14 @@
+<template name="postsList">
+	{{#each posts}}
+		{{> postItem}}
+	{{/each}}
+
+	{{#if nextPath}}
+		<a class="load-more" href="{{nextPath}}">Load More</a>
+	{{else}}
+		{{#unless ready}}
+			{{> spinner}}
+		{{/unless}}
+		<p class="text-center">No more posts to show.</p>
+	{{/if}}
+</template>

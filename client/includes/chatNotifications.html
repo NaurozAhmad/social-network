@@ -1,0 +1,27 @@
+<template name="chatNotifications">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		Chat
+		{{#if chatCount}}
+			<span class="badge badge-inverse">{{chatCount}}</span>
+		{{/if}}
+		<b class="caret"></b>
+	</a>
+	<ul class="notification dropdown-menu" role="menu">
+		{{#if chatCount}}
+			{{#each chatNotifs}}
+				{{> chatNotif}}
+			{{/each}}
+		{{else}}
+			<li><span>No New Chats</span></li>
+		{{/if}}
+		<li><span><a href="{{pathFor 'chatMenu'}}">Go to chats</a></span></li>
+	</ul>
+</template>
+
+<template name="chatNotif">
+	<li>
+		<a href="{{chatNotifPath}}">
+			<strong>{{senderName}}</strong> sent you a message.
+		</a>
+	</li>
+</template>

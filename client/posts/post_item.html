@@ -1,0 +1,20 @@
+<template name="postItem">
+	<div class="post">
+		<div class="post-content">
+			<div class="text-right">{{#if ownPost}}
+					<a href="{{pathFor 'postEdit'}}">Edit</a>
+			{{/if}}</div>
+			<h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
+			
+			<div class="text-left col-sm-5">
+				By: {{author}}
+				
+			</div>
+			<div class="text-right col-sm-7">
+				{{submittedText}}
+			</div>
+			<p>{{content}}</p>
+			<p>{{commentsCount}} comments</p>
+		</div>
+	</div>
+</template>

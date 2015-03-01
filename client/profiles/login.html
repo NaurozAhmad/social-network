@@ -1,0 +1,21 @@
+<template name="login">
+    <li class="dropdown" id="menuLogin">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin" style="padding-top: 14px;">Login</a>
+        <div class="dropdown-menu" style="padding:17px;">
+          	<form class="form-inline">
+              {{loginMessage}}
+          		<div class="form-group">
+          			<label for="login-user">Username</label>
+          			<input class="form-control" name="login-user" type="text" id="login-user">
+          		</div>
+            	<div class="form-group">
+            		<label for="login-pass">Password</label>
+            		<input class="form-control" name="login-pass" type="password" id="login-pass">
+            	</div>
+            		<input class="btn btn-default btn-block" type="submit" value="Login">
+          	</form>
+            <li><a id="registerLink" href="{{pathFor 'register'}}">Register</a></li>
+        </div>
+        
+  	</li>
+</template>
