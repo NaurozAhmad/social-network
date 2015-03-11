@@ -11,6 +11,6 @@ ian:bootstrap-3
 accounts-password
 multiply:iron-router-progress
 cfs:standard-packages
-cfs:filesystem
 accounts-ui
 momentjs:moment
+cfs:gridfs

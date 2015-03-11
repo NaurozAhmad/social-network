@@ -16,6 +16,6 @@ Template.login.events({
 		else {
 			Session.set('loginMessage', 'Wrong ID or Password.');
 		}
-		
+
 	}
 })
