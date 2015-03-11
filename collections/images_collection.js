@@ -1,7 +1,5 @@
-var imageStore = new FS.Store.GridFS('images');
-
-Images = new FS.Collection('images', {
-   stores: [imageStore]
+var Images = new FS.Collection('images', {
+   stores: [new FS.Store.FileSystem('images', {path: "~/client/media/images"})]
 });
 
 Images.allow({

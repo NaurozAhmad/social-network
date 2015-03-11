@@ -13,4 +13,4 @@ multiply:iron-router-progress
 cfs:standard-packages
 accounts-ui
 momentjs:moment
-cfs:gridfs
+cfs:filesystem
