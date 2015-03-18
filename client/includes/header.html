@@ -10,10 +10,10 @@
 				</button>
 				<a href="{{pathFor 'postsList'}}" class="navbar-brand">Nexus 15</a>
 			</div>
-			
+
 			<div class="collapse navbar-collapse" id="collapsable">
 				<ul class="nav navbar-nav">
-					
+
 					{{#if currentUser}}
 						<li><a href="{{pathFor 'postSubmit'}}">Submit Post</a></li>
 						<li class="dropdown">{{> notifications}}</li>
@@ -23,12 +23,10 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					{{#if currentUser}}
-						{{> thisUser}}
+						{{> loggedInUser}}
 					{{else}}
-						
 						{{> login}}
 					{{/if}}
-					<!-- <li style="padding-top: 14px">{{> loginButtons}}</li> -->
 				</ul>
 			</div>
 		</div>

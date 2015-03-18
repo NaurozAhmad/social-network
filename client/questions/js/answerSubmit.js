@@ -54,7 +54,7 @@ Template.answer.events({
 			vote: 'upvoted',
 			qId: this.ansFor,
 			aId: this._id
-		}
+		};
 		Meteor.call('voted', voter, function(error, result) {
 			if(error) {
 				throwError(error.reason);
@@ -69,7 +69,7 @@ Template.answer.events({
 			vote: 'downvoted',
 			qId: this.ansFor,
 			aId: this._id
-		}
+		};
 		Meteor.call('voted', voter, function(error, result) {
 			if(error) {
 				throwError(error.reason);
@@ -78,7 +78,6 @@ Template.answer.events({
 	},
 	'click .removeUpvote': function(e) {
 		e.preventDefault();
-		console.log(this._id);
 		if(this.vote === "upvoted") {
 			Answers.update({_id: this.aId}, {$inc: {votes: -1}});
 		}
@@ -100,6 +99,6 @@ Template.answer.events({
 			else {
 				Router.go('questions');
 			}
-		}) 
+		});
 	}
-})
+});

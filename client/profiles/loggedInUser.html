@@ -1,0 +1,19 @@
+<template name="loggedInUser">
+	<li class="dropdown">
+		<a style="padding-top:9px; padding-bottom: 10px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+			{{#if isProfilePic}}
+			{{#each images}}
+			<img class="img img-circle" src="{{this.url}}">
+			{{/each}}
+			{{else}}
+			<img class="img img-circle" src="/images/default-user.png">
+			{{/if}}
+			<span class="caret">
+			</span>
+		</a>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="{{pathFor 'profile'}}">Profile</a></li>
+			<li><a href="#" class="logout">Logout</a></li>
+		</ul>
+	</li>
+</template>

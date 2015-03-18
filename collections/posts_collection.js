@@ -12,25 +12,25 @@ Posts.deny({
 });
 
 Meteor.methods({
-	post: function(postAttr) {
+	post: function(data) {
 		var user = Meteor.user();
 
 		if(!user) {
 			throw new Meteor.Error(401, "Login first.");
 		}
-
-		if(!postAttr.title) {
+		if(!data.post.title) {
 			throw new Meteor.Error(422, "Enter a title for the post.");
 		}
-		if(!postAttr.content) {
+		if(!data.post.content) {
 			throw new Meteor.Error(422, "Say something.");
 		}
 
-		var post = _.extend(postAttr, {
+		var post = _.extend(data.post, {
 			userId: user._id,
 			author: user.username,
 			submitted: new Date().getTime(),
-			commentsCount: 0
+			commentsCount: 0,
+			images: data.files
 		});
 
 		var postId = Posts.insert(post);

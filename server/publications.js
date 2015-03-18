@@ -2,8 +2,16 @@ Meteor.publish('posts', function(options) {
 	return Posts.find({}, options);
 });
 
+Meteor.publish('images', function(options) {
+	return Images.find({}, options);
+});
+
+Meteor.publish('allImages', function() {
+	return Images.find();
+});
+
 Meteor.publish('singlePost', function(id) {
-	return Posts.find(id)
+	return Posts.find(id);
 });
 
 Meteor.publish('comments', function(postId) {
@@ -43,5 +51,13 @@ Meteor.publish('tags', function() {
 });
 
 Meteor.publish('votes', function(questId) {
-	return Votes.find({qId: questId})
-})
+	return Votes.find({qId: questId});
+});
+
+// Meteor.publish('filePost', function(options) {
+// 	return FilePost.find({}, options);
+// });
+//
+// Meteor.publish('profilePics', function() {
+// 	return ProfilePics.find();
+// });

@@ -7,10 +7,14 @@ meteor-platform
 
 iron:router
 sacha:spin
-ian:bootstrap-3
 accounts-password
 multiply:iron-router-progress
-cfs:standard-packages
 accounts-ui
 momentjs:moment
+jquery
+fortawesome:fontawesome
+jonblum:jquery-cropper
+twbs:bootstrap
+cfs:standard-packages
 cfs:filesystem
+summernote:summernote

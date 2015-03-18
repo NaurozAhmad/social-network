@@ -1,0 +1,56 @@
+.reg-user-img {
+   margin-left:auto;
+   margin-right:auto;
+}
+.img-circle {
+   width:100px;
+   height:auto;
+   margin: 0 auto;
+}
+div.browse-wrap {
+   top: 0px;
+   left: 0px;
+   margin-top: 10px;
+   cursor: pointer;
+   overflow: hidden;
+   padding: 0px 32px;
+   text-align: center;
+   position: relative;
+   background-color: rgb(255, 255, 255);
+   border: medium none;
+}
+div.title {
+   color:#3b5998;
+   font-size:14px;
+   font-weight:bold;
+   font-family:tahoma, arial, sans-serif;
+}
+input.upload {
+   right:0;
+   margin:0;
+   bottom:0;
+   padding:0;
+   opacity:0;
+   height:300px;
+   outline:none;
+   cursor:inherit;
+   position:absolute;
+   font-size:1000px !important;
+}
+span.upload-path {
+   text-align: center;
+   margin:20px;
+   display:block;
+   font-size: 80%;
+   color:#3b5998;
+   font-weight:bold;
+   font-family:tahoma, arial, sans-serif;
+}
+.crop-image {
+   margin: 0 auto;
+   width: 400px;
+   height: 400px;
+}
+.modal {
+   z-index: 2001;
+}

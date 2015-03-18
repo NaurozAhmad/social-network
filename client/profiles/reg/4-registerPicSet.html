@@ -1,0 +1,11 @@
+<template name="regPicSet">
+   <a id="back" class="btn btn-default">Back</a>
+   <div class="crop-image">
+      {{#each regPicURL}}
+         <img src="{{this.url}}">
+      {{/each}}
+   </div>
+   <div style="margin: 10px auto;">
+      <button class="btn btn-default" style="margin-left: 46%" id="getData">Done</button>
+   </div>
+</template>

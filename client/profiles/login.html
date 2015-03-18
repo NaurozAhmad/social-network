@@ -1,6 +1,6 @@
 <template name="login">
     <li class="dropdown" id="menuLogin">
-        <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin" style="padding-top: 14px;">Login</a>
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin" style="padding-top: 9px;"><i class="fa fa-sign-in" style="font-size: 25px;"></i></a>
         <div class="dropdown-menu" style="padding:17px;">
           	<form class="form-inline">
               {{loginMessage}}
@@ -14,8 +14,8 @@
             	</div>
             		<input class="btn btn-default btn-block" type="submit" value="Login">
           	</form>
-            <li><a id="registerLink" href="{{pathFor 'register'}}">Register</a></li>
+            <li><a id="regLink" href="{{pathFor 'regBasicInfo'}}">Register</a></li>
         </div>
-        
+
   	</li>
 </template>

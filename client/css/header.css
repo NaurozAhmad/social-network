@@ -18,10 +18,17 @@
 .navbar-inverse {
 	border-bottom: none;
 }
-#registerLink {
+#regLink {
 	color: #fff;
 }
-#registerLink:hover, #registerLink:focus {
+#regLink:hover, #regLink:focus {
 	color: #B7B7B7;
 	background-color: rgba(0,0,0,0);
+}
+.navbar {
+	z-index: 50;
+
+}
+.navbar-nav img {
+	width: 31px;
 }

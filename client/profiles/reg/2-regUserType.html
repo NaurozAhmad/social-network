@@ -1,0 +1,13 @@
+<template name="regUserType">
+   <a href="{{pathFor 'regBasicInfo'}}" class="btn btn-default">Back</a>
+   <div class="main">
+      <form class="form-horizontal">
+         {{#if userType}}
+            {{> regStudent}}
+         {{else}}
+            {{> regTeacher}}
+         {{/if}}
+         <a href="" id="next">Next Step</a>
+      </form>
+   </div>
+</template>

@@ -1,0 +1,43 @@
+<template name="regTeacher">
+   <div class="form-group">
+      <label for="department" class="control-label col-md-2">Department</label>
+      <div class="col-md-10">
+         <select class="form-control" name="department">
+            <option value="">
+               --- Select Department ---
+            </option>
+            <option value="computer-science">Computer Science</option>
+         </select>
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="subject" class="control-label col-md-2">Subjects</label>
+      <div class="col-md-10" id="subjects">
+         <div class="col-md-6">
+            <label class="checkbox">
+               <input type="checkbox" name="subject" value="networking">Networking
+            </label>
+            <label class="checkbox">
+               <input type="checkbox" name="subject" value="dld">Data Language and Design
+            </label>
+            <label class="checkbox">
+               <input type="checkbox" name="subject" value="electronics">Electronics
+            </label>
+            <label class="checkbox">
+               <input type="checkbox" name="subject" value="database">Database
+            </label>
+         </div>
+         <div class="col-md-6">
+            <label class="checkbox">
+               <input type="checkbox" name="subject" value="java">Java Programming
+            </label>
+            <label class="checkbox">
+               <input type="checkbox" name="subject" value="web-dev">Web Development
+            </label>
+            <label class="checkbox">
+               <input type="checkbox" name="subject" value="c#">C# Programming
+            </label>
+         </div>
+      </div>
+   </div>
+</template>

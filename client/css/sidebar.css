@@ -1,11 +1,9 @@
 .side-bar {
 	height: 100%;
 	top: 50px;
-	width: 250px;
 	position: fixed;
-	background: #eee;
-	z-index: 1000;
-	border-right: 1px solid #ddd;
+	background: #fff;
+	z-index: 20;
 }
 .side-bar button {
 	width: 100%;

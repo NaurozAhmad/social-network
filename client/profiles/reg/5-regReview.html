@@ -1,0 +1,102 @@
+<template name="regReview">
+   <h2>Review</h2>
+   <img class="img img-circle img-responsive" src="{{finalPic}}">
+   <div class="main">
+      <table class="table" style="margin: 0 auto; width: 45%">
+         <tr>
+            <td>
+               1
+            </td>
+            <td>
+               Username
+            </td>
+            <td>
+               {{username}}
+            </td>
+         </tr>
+         <tr>
+            <td>
+               2
+            </td>
+            <td>
+               Password
+            </td>
+            <td>
+               Your chosen password.
+            </td>
+         </tr>
+         <tr>
+            <td>
+               3
+            </td>
+            <td>
+               User Type
+            </td>
+            <td>
+               {{userType}}
+            </td>
+         </tr>
+         <tr>
+            <td>
+               4
+            </td>
+            <td>
+               Department
+            </td>
+            <td>
+               {{dept}}
+            </td>
+         </tr>
+         {{#if type}}
+         <tr>
+            <td>
+               5
+            </td>
+            <td>
+               Level
+            </td>
+            <td>
+               {{level}}
+            </td>
+         </tr>
+         <tr>
+            <td>
+               6
+            </td>
+            <td>
+               Session
+            </td>
+            <td>
+               {{session}}
+            </td>
+         </tr>
+         <tr>
+            <td>
+               7
+            </td>
+            <td>
+               Semester
+            </td>
+            <td>
+               {{semester}}
+            </td>
+         </tr>
+         {{else}}
+         <tr>
+            <td>
+               5
+            </td>
+            <td>
+               Subjects
+            </td>
+            <td>
+               {{#each subjects}}
+                  {{this}}
+               {{/each}}
+            </td>
+         </tr>
+         {{/if}}
+      </table>
+   </div>
+   <button class="btn btn-default" style="margin: 0px auto; display: block">Done</button>
+</template>

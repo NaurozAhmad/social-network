@@ -5,4 +5,4 @@ Template.questions.helpers({
 	submitted: function() {
 		return moment(new Date(this.submitted)).fromNow();
 	}
-})
+});

@@ -15,7 +15,7 @@ Meteor.methods({
 
 		var userId = Accounts.createUser(userAttr);
 
-		return userId
+		return userId;
 	},
 	addUserStuff: function(stuffAttr) {
 		if(stuffAttr.type === "student") {
@@ -47,5 +47,6 @@ Meteor.methods({
 
 		var newId = UserStuff.insert(newStuff);
 
+		return newId;
 	}
-})
+});
